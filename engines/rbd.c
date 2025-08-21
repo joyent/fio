@@ -168,6 +168,7 @@ static int _fio_rbd_connect(struct thread_data *td)
 	struct rbd_data *rbd = td->io_ops_data;
 	struct rbd_options *o = td->eo;
 	int r;
+  // rbd_encryption_luks1_format_options_t luks1_opt;
 
 	if (o->cluster_name) {
 		char *client_name = NULL; 
@@ -227,7 +228,7 @@ static int _fio_rbd_connect(struct thread_data *td)
 		goto failed_shutdown;
 	}
 
-        if (td->o.odirect) {
+	if (td->o.odirect) {
 		r = rados_conf_set(rbd->cluster, "rbd_cache", "false");
 		if (r < 0) {
 			log_info("failed to disable RBD in-memory cache\n");
@@ -239,6 +240,23 @@ static int _fio_rbd_connect(struct thread_data *td)
 		log_err("rbd_open failed.\n");
 		goto failed_open;
 	}
+
+  log_err("HELLO!!!!!");
+  // luks1_opts.alg = RBD_ENCRYPTION_ALGORITHM_AES256;
+  // luks1_opts.passphrase = "password";
+  // luks1_opts.passphrase_size = 8;
+    rbd_encryption_luks1_format_options_t luks1_opts = {
+          .alg = RBD_ENCRYPTION_ALGORITHM_AES256,
+          .passphrase = "password",
+          .passphrase_size = 8,
+  };
+  log_err("HELLO");
+  r = rbd_encryption_load(rbd->io_ctx, RBD_ENCRYPTION_FORMAT_LUKS1, &luks1_opts, sizeof(luks1_opts));
+   log_err("GOODBYE");
+  if (r < 0) {
+    log_err("rbd_encryption_load failed.\n");
+    goto failed_open;
+  }
 
 	if (!td->o.odirect) {
 		/*
