@@ -40,6 +40,7 @@ struct rbd_options {
 	char *pool_name;
 	char *client_name;
 	int busy_poll;
+  char *passphrase;
 };
 
 static struct fio_option options[] = {
@@ -86,6 +87,15 @@ static struct fio_option options[] = {
 		.help		= "Busy poll for completions instead of sleeping",
 		.off1		= offsetof(struct rbd_options, busy_poll),
 		.def		= "0",
+		.category	= FIO_OPT_C_ENGINE,
+		.group		= FIO_OPT_G_RBD,
+	},
+	{
+		.name		= "passphrase",
+		.lname		= "Passphrase",
+		.type		= FIO_OPT_STR_STORE,
+		.help		= "Passphrase for images encrypted with LUKS",
+		.off1		= offsetof(struct rbd_options, passphrase),
 		.category	= FIO_OPT_C_ENGINE,
 		.group		= FIO_OPT_G_RBD,
 	},
@@ -168,7 +178,7 @@ static int _fio_rbd_connect(struct thread_data *td)
 	struct rbd_data *rbd = td->io_ops_data;
 	struct rbd_options *o = td->eo;
 	int r;
-  // rbd_encryption_luks1_format_options_t luks1_opt;
+  rbd_encryption_luks1_format_options_t luks1_opts;
 
 	if (o->cluster_name) {
 		char *client_name = NULL; 
@@ -241,22 +251,19 @@ static int _fio_rbd_connect(struct thread_data *td)
 		goto failed_open;
 	}
 
-  log_err("HELLO!!!!!");
-  // luks1_opts.alg = RBD_ENCRYPTION_ALGORITHM_AES256;
-  // luks1_opts.passphrase = "password";
-  // luks1_opts.passphrase_size = 8;
-    rbd_encryption_luks1_format_options_t luks1_opts = {
-          .alg = RBD_ENCRYPTION_ALGORITHM_AES256,
-          .passphrase = "password",
-          .passphrase_size = 8,
-  };
-  log_err("HELLO");
-  r = rbd_encryption_load(rbd->io_ctx, RBD_ENCRYPTION_FORMAT_LUKS1, &luks1_opts, sizeof(luks1_opts));
-   log_err("GOODBYE");
-  if (r < 0) {
-    log_err("rbd_encryption_load failed.\n");
-    goto failed_open;
+  if (o->passphrase) {
+    // TODO: support luks2
+    luks1_opts.alg = RBD_ENCRYPTION_ALGORITHM_AES256;
+    luks1_opts.passphrase = o->passphrase;
+    luks1_opts.passphrase_size = strlen(o->passphrase);
+
+    r = rbd_encryption_load(rbd->image, RBD_ENCRYPTION_FORMAT_LUKS1, &luks1_opts, sizeof(luks1_opts));
+    if (r < 0) {
+      log_err("rbd_encryption_load failed.\n");
+      goto failed_open;
+    }
   }
+
 
 	if (!td->o.odirect) {
 		/*
