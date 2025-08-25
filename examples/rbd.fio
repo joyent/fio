@@ -13,8 +13,9 @@
 #write_lat_log=write_lat_log
 ioengine=rbd
 clientname=admin
-pool=rbd
-rbdname=fio_test
+pool=automated-test-pool
+rbdname=luks1-2
+passphrase=password
 rw=randwrite
 bs=4k
 
