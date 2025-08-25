@@ -85,6 +85,7 @@ ceph.systems = ["aarch64-linux", "x86_64-linux"]
 ## ------------------------------------------------------------------
 [build]
 [build.fio]
+sandbox = "pure"
 description = "fio, but with rbd encryption support"
 version = "0.0.1"
 command = """

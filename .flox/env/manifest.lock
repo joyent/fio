@@ -23,6 +23,7 @@
     "build": {
       "fio": {
         "command": "  mkdir -p $out/bin\n  make\n  cp fio $out/bin/fio\n# ",
+        "sandbox": "pure",
         "version": "0.0.1",
         "description": "fio, but with rbd encryption support"
       }
