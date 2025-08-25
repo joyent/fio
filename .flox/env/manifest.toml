@@ -15,10 +15,11 @@ version = 1
 ##  $ flox show gum     <- show all versions of a package
 ## -------------------------------------------------------------------
 [install]
-vim.pkg-path = "vim"
-gdb.pkg-path = "gdb"
 ceph.pkg-path = "ceph"
 ceph.systems = ["aarch64-linux", "x86_64-linux"]
+gcc.pkg-path = "gcc"
+glibc.pkg-path = "glibc"
+glibc.systems = ["aarch64-linux", "x86_64-linux"]
 # gum.pkg-path = "gum"
 # gum.version = "^0.14.5"
 

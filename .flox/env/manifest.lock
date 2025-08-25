@@ -10,11 +10,15 @@
           "x86_64-linux"
         ]
       },
-      "gdb": {
-        "pkg-path": "gdb"
+      "gcc": {
+        "pkg-path": "gcc"
       },
-      "vim": {
-        "pkg-path": "vim"
+      "glibc": {
+        "pkg-path": "glibc",
+        "systems": [
+          "aarch64-linux",
+          "x86_64-linux"
+        ]
       }
     },
     "hook": {},
@@ -101,248 +105,202 @@
       "priority": 5
     },
     {
-      "attr_path": "gdb",
+      "attr_path": "gcc",
       "broken": false,
-      "derivation": "/nix/store/a3ckmpxz9qgj5d6lxzb042y8l1fx8j5p-gdb-16.3.drv",
-      "description": "GNU Project debugger",
-      "install_id": "gdb",
+      "derivation": "/nix/store/85g8l285vdbci7dpv6k069lnny9m6rk9-gcc-wrapper-14.3.0.drv",
+      "description": "GNU Compiler Collection, version 14.3.0 (wrapper script)",
+      "install_id": "gcc",
       "license": "GPL-3.0-or-later",
       "locked_url": "https://github.com/flox/nixpkgs?rev=9807714d6944a957c2e036f84b0ff8caf9930bc0",
-      "name": "gdb-16.3",
-      "pname": "gdb",
+      "name": "gcc-wrapper-14.3.0",
+      "pname": "gcc",
       "rev": "9807714d6944a957c2e036f84b0ff8caf9930bc0",
       "rev_count": 826938,
       "rev_date": "2025-07-08T14:16:20Z",
-      "scrape_date": "2025-07-10T05:14:30.915195Z",
+      "scrape_date": "2025-07-10T05:14:30.905135Z",
       "stabilities": [
         "staging",
         "unstable"
       ],
       "unfree": false,
-      "version": "16.3",
+      "version": "14.3.0",
       "outputs_to_install": [
+        "man",
         "out"
       ],
       "outputs": {
-        "out": "/nix/store/9f9vsxqjs9lrkyv6jb5dsjiz4cc771g5-gdb-16.3"
+        "info": "/nix/store/qagnb15gfwxivn34610m0zqnwxrc3y3x-gcc-wrapper-14.3.0-info",
+        "man": "/nix/store/jhjasqmzbajybva8zfa4gxw9gli3gx5c-gcc-wrapper-14.3.0-man",
+        "out": "/nix/store/ayx4cw7p2ny3ja3by9s0g5fl79w5sx36-gcc-wrapper-14.3.0"
       },
       "system": "aarch64-darwin",
       "group": "toplevel",
       "priority": 5
     },
     {
-      "attr_path": "gdb",
+      "attr_path": "gcc",
       "broken": false,
-      "derivation": "/nix/store/34zzw8m9c1ziqcizn7j7m978kr9vnc16-gdb-16.3.drv",
-      "description": "GNU Project debugger",
-      "install_id": "gdb",
+      "derivation": "/nix/store/jkvjq0f6z9c3xhxj1agzyyqsbxwjmwf0-gcc-wrapper-14.3.0.drv",
+      "description": "GNU Compiler Collection, version 14.3.0 (wrapper script)",
+      "install_id": "gcc",
       "license": "GPL-3.0-or-later",
       "locked_url": "https://github.com/flox/nixpkgs?rev=9807714d6944a957c2e036f84b0ff8caf9930bc0",
-      "name": "gdb-16.3",
-      "pname": "gdb",
+      "name": "gcc-wrapper-14.3.0",
+      "pname": "gcc",
       "rev": "9807714d6944a957c2e036f84b0ff8caf9930bc0",
       "rev_count": 826938,
       "rev_date": "2025-07-08T14:16:20Z",
-      "scrape_date": "2025-07-10T05:34:51.295705Z",
+      "scrape_date": "2025-07-10T05:34:51.281566Z",
       "stabilities": [
         "staging",
         "unstable"
       ],
       "unfree": false,
-      "version": "16.3",
+      "version": "14.3.0",
       "outputs_to_install": [
+        "man",
         "out"
       ],
       "outputs": {
-        "out": "/nix/store/nhjckrzpyhmqnhxw5xp4m3kipgbpf64x-gdb-16.3"
+        "info": "/nix/store/hzbypijngrral6avxr8gypkkzfj49dbb-gcc-wrapper-14.3.0-info",
+        "man": "/nix/store/ppydldr7kc9m7nqlykmvfxcx5qjwb3n7-gcc-wrapper-14.3.0-man",
+        "out": "/nix/store/290idwd3a9c2lyi5mzixyn5qrxmzihzn-gcc-wrapper-14.3.0"
       },
       "system": "aarch64-linux",
       "group": "toplevel",
       "priority": 5
     },
     {
-      "attr_path": "gdb",
+      "attr_path": "gcc",
       "broken": false,
-      "derivation": "/nix/store/n6ss9mklggfivxd9px23b8jcsqnbz3md-gdb-16.3.drv",
-      "description": "GNU Project debugger",
-      "install_id": "gdb",
+      "derivation": "/nix/store/4ysjaiwqaz3xr939srx9r4s52d82kdwn-gcc-wrapper-14.3.0.drv",
+      "description": "GNU Compiler Collection, version 14.3.0 (wrapper script)",
+      "install_id": "gcc",
       "license": "GPL-3.0-or-later",
       "locked_url": "https://github.com/flox/nixpkgs?rev=9807714d6944a957c2e036f84b0ff8caf9930bc0",
-      "name": "gdb-16.3",
-      "pname": "gdb",
+      "name": "gcc-wrapper-14.3.0",
+      "pname": "gcc",
       "rev": "9807714d6944a957c2e036f84b0ff8caf9930bc0",
       "rev_count": 826938,
       "rev_date": "2025-07-08T14:16:20Z",
-      "scrape_date": "2025-07-10T05:53:49.187488Z",
+      "scrape_date": "2025-07-10T05:53:49.176849Z",
       "stabilities": [
         "staging",
         "unstable"
       ],
       "unfree": false,
-      "version": "16.3",
+      "version": "14.3.0",
       "outputs_to_install": [
+        "man",
         "out"
       ],
       "outputs": {
-        "out": "/nix/store/hf2hqbnzsgim2jw29kahif8ykqkwzy4q-gdb-16.3"
+        "info": "/nix/store/fplrrdhdzbqwbiv5vv51qbzns4a1wr8z-gcc-wrapper-14.3.0-info",
+        "man": "/nix/store/v78ik0rd7kv8nhhsm6h23hrgwsrp5xph-gcc-wrapper-14.3.0-man",
+        "out": "/nix/store/zh8g82br5jjpidj3kix96x32yrfxgyx4-gcc-wrapper-14.3.0"
       },
       "system": "x86_64-darwin",
       "group": "toplevel",
       "priority": 5
     },
     {
-      "attr_path": "gdb",
+      "attr_path": "gcc",
       "broken": false,
-      "derivation": "/nix/store/4wd81wz4vm5605v4r0ff5yq6rsfh50x6-gdb-16.3.drv",
-      "description": "GNU Project debugger",
-      "install_id": "gdb",
+      "derivation": "/nix/store/wz71r3fbdzxicz9zsc67nih3c452jgy9-gcc-wrapper-14.3.0.drv",
+      "description": "GNU Compiler Collection, version 14.3.0 (wrapper script)",
+      "install_id": "gcc",
       "license": "GPL-3.0-or-later",
       "locked_url": "https://github.com/flox/nixpkgs?rev=9807714d6944a957c2e036f84b0ff8caf9930bc0",
-      "name": "gdb-16.3",
-      "pname": "gdb",
+      "name": "gcc-wrapper-14.3.0",
+      "pname": "gcc",
       "rev": "9807714d6944a957c2e036f84b0ff8caf9930bc0",
       "rev_count": 826938,
       "rev_date": "2025-07-08T14:16:20Z",
-      "scrape_date": "2025-07-10T06:15:25.782832Z",
+      "scrape_date": "2025-07-10T06:15:25.767014Z",
       "stabilities": [
         "staging",
         "unstable"
       ],
       "unfree": false,
-      "version": "16.3",
+      "version": "14.3.0",
       "outputs_to_install": [
+        "man",
         "out"
       ],
       "outputs": {
-        "out": "/nix/store/30ny2x1zhcl6k65nmw6bqn9z7mrk0afy-gdb-16.3"
+        "info": "/nix/store/7i5d2jdwgvj7i97r6jpqclds48m6pvjm-gcc-wrapper-14.3.0-info",
+        "man": "/nix/store/rjcbyaw5i75grgh6ifkbc2ggzx8v7vsi-gcc-wrapper-14.3.0-man",
+        "out": "/nix/store/pbqah1qk4b5y14fqinr1h8zvhqy71v81-gcc-wrapper-14.3.0"
       },
       "system": "x86_64-linux",
       "group": "toplevel",
       "priority": 5
     },
     {
-      "attr_path": "vim",
+      "attr_path": "glibc",
       "broken": false,
-      "derivation": "/nix/store/mbg62yiwxddd5v1flkkfgnqmpdb9i85g-vim-9.1.1401.drv",
-      "description": "Most popular clone of the VI editor",
-      "install_id": "vim",
-      "license": "Vim",
+      "derivation": "/nix/store/sa97r6zi5zgsr3m5c788ra4l6g169pjk-glibc-2.40-66.drv",
+      "description": "GNU C Library",
+      "install_id": "glibc",
+      "license": "LGPL-2.0-or-later",
       "locked_url": "https://github.com/flox/nixpkgs?rev=9807714d6944a957c2e036f84b0ff8caf9930bc0",
-      "name": "vim-9.1.1401",
-      "pname": "vim",
+      "name": "glibc-2.40-66",
+      "pname": "glibc",
       "rev": "9807714d6944a957c2e036f84b0ff8caf9930bc0",
       "rev_count": 826938,
       "rev_date": "2025-07-08T14:16:20Z",
-      "scrape_date": "2025-07-10T05:15:28.937723Z",
+      "scrape_date": "2025-07-10T05:34:51.446490Z",
       "stabilities": [
         "staging",
         "unstable"
       ],
       "unfree": false,
-      "version": "9.1.1401",
+      "version": "2.40-66",
       "outputs_to_install": [
-        "out",
-        "xxd"
+        "bin"
       ],
       "outputs": {
-        "out": "/nix/store/23amfbnd1maxcn78q137nh7sj2wpakcw-vim-9.1.1401",
-        "xxd": "/nix/store/l4pr0lk2lr4risbg7yzggn9inpikx540-vim-9.1.1401-xxd"
-      },
-      "system": "aarch64-darwin",
-      "group": "toplevel",
-      "priority": 5
-    },
-    {
-      "attr_path": "vim",
-      "broken": false,
-      "derivation": "/nix/store/h4lccj3gfb7y0z1r6bbspvdfzs0cy6k5-vim-9.1.1401.drv",
-      "description": "Most popular clone of the VI editor",
-      "install_id": "vim",
-      "license": "Vim",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=9807714d6944a957c2e036f84b0ff8caf9930bc0",
-      "name": "vim-9.1.1401",
-      "pname": "vim",
-      "rev": "9807714d6944a957c2e036f84b0ff8caf9930bc0",
-      "rev_count": 826938,
-      "rev_date": "2025-07-08T14:16:20Z",
-      "scrape_date": "2025-07-10T05:36:20.426826Z",
-      "stabilities": [
-        "staging",
-        "unstable"
-      ],
-      "unfree": false,
-      "version": "9.1.1401",
-      "outputs_to_install": [
-        "out",
-        "xxd"
-      ],
-      "outputs": {
-        "out": "/nix/store/1zh66ry3k8bkazvdw6v4pb6pp5f6h82y-vim-9.1.1401",
-        "xxd": "/nix/store/hp2abgk3b5h15bg6hqx2s1zxyczvgx8v-vim-9.1.1401-xxd"
+        "bin": "/nix/store/z2dzk2p7i3wmli6dm7i5z0l20gvpgxxc-glibc-2.40-66-bin",
+        "debug": "/nix/store/d3gg2vcgx9rql6w0i14nbx7zhimhxrj3-glibc-2.40-66-debug",
+        "dev": "/nix/store/98lw57pks2w9lj0bxpsqykacz0hpn6hm-glibc-2.40-66-dev",
+        "getent": "/nix/store/0164cz6323ljrlswkcd8dv15yaa0wzhb-glibc-2.40-66-getent",
+        "out": "/nix/store/gydncjm02ww60x9gamkhfwj3f34g3g8m-glibc-2.40-66",
+        "static": "/nix/store/xnzqw79ynj749ysm37dakf9f065ajm6m-glibc-2.40-66-static"
       },
       "system": "aarch64-linux",
       "group": "toplevel",
       "priority": 5
     },
     {
-      "attr_path": "vim",
+      "attr_path": "glibc",
       "broken": false,
-      "derivation": "/nix/store/yyh4xza365fi89pjsk2nz1wz0z839mqb-vim-9.1.1401.drv",
-      "description": "Most popular clone of the VI editor",
-      "install_id": "vim",
-      "license": "Vim",
+      "derivation": "/nix/store/9afi214j4lpa7ngdmj5g34c7zn2a8lih-glibc-2.40-66.drv",
+      "description": "GNU C Library",
+      "install_id": "glibc",
+      "license": "LGPL-2.0-or-later",
       "locked_url": "https://github.com/flox/nixpkgs?rev=9807714d6944a957c2e036f84b0ff8caf9930bc0",
-      "name": "vim-9.1.1401",
-      "pname": "vim",
+      "name": "glibc-2.40-66",
+      "pname": "glibc",
       "rev": "9807714d6944a957c2e036f84b0ff8caf9930bc0",
       "rev_count": 826938,
       "rev_date": "2025-07-08T14:16:20Z",
-      "scrape_date": "2025-07-10T05:54:47.835314Z",
+      "scrape_date": "2025-07-10T06:15:25.949432Z",
       "stabilities": [
         "staging",
         "unstable"
       ],
       "unfree": false,
-      "version": "9.1.1401",
+      "version": "2.40-66",
       "outputs_to_install": [
-        "out",
-        "xxd"
+        "bin"
       ],
       "outputs": {
-        "out": "/nix/store/5bhswby0qg25nbd58435yqk59f6igsag-vim-9.1.1401",
-        "xxd": "/nix/store/l83zph53k41xhfp1zc7jfqlsz4ili7gh-vim-9.1.1401-xxd"
-      },
-      "system": "x86_64-darwin",
-      "group": "toplevel",
-      "priority": 5
-    },
-    {
-      "attr_path": "vim",
-      "broken": false,
-      "derivation": "/nix/store/h11ja69c4sp0ay6bxjkrf78g0ycfs15f-vim-9.1.1401.drv",
-      "description": "Most popular clone of the VI editor",
-      "install_id": "vim",
-      "license": "Vim",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=9807714d6944a957c2e036f84b0ff8caf9930bc0",
-      "name": "vim-9.1.1401",
-      "pname": "vim",
-      "rev": "9807714d6944a957c2e036f84b0ff8caf9930bc0",
-      "rev_count": 826938,
-      "rev_date": "2025-07-08T14:16:20Z",
-      "scrape_date": "2025-07-10T06:17:04.098030Z",
-      "stabilities": [
-        "staging",
-        "unstable"
-      ],
-      "unfree": false,
-      "version": "9.1.1401",
-      "outputs_to_install": [
-        "out",
-        "xxd"
-      ],
-      "outputs": {
-        "out": "/nix/store/cxy72qdk41k3zjs5fw1nw1whv6wf7hv2-vim-9.1.1401",
-        "xxd": "/nix/store/158s805sbka8vv2mwf34kjwmz7inr67m-vim-9.1.1401-xxd"
+        "bin": "/nix/store/mdmsnfcvxyk5ynz7nx8nhss1wig0gljx-glibc-2.40-66-bin",
+        "debug": "/nix/store/4iraj8vk6y0sz49sqkx7mcv5sxyxl8i5-glibc-2.40-66-debug",
+        "dev": "/nix/store/x4cz3spvw0bwwz5sjsdn2qm4f89rcryn-glibc-2.40-66-dev",
+        "getent": "/nix/store/xkil4rvppkldrvzxz2jk7k1bqfda7vjz-glibc-2.40-66-getent",
+        "out": "/nix/store/q4wq65gl3r8fy746v9bbwgx4gzn0r2kl-glibc-2.40-66",
+        "static": "/nix/store/zvp1yv25qmgkfkjqrrbmxg91ps5jjjjz-glibc-2.40-66-static"
       },
       "system": "x86_64-linux",
       "group": "toplevel",
