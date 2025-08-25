@@ -32,3 +32,9 @@ doc/output
 /t/zbd/test-zbd-support.log.*
 /t/fuzz/fuzz_parseini
 tsc-rate
+# mine
+.DS_Store
+password
+result-fio
+.vscode
+microceph.conf

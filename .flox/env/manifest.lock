@@ -1,0 +1,351 @@
+{
+  "lockfile-version": 1,
+  "manifest": {
+    "version": 1,
+    "install": {
+      "ceph": {
+        "pkg-path": "ceph",
+        "systems": [
+          "aarch64-linux",
+          "x86_64-linux"
+        ]
+      },
+      "gdb": {
+        "pkg-path": "gdb"
+      },
+      "vim": {
+        "pkg-path": "vim"
+      }
+    },
+    "hook": {},
+    "profile": {},
+    "options": {},
+    "build": {
+      "fio": {
+        "command": "  mkdir -p $out/bin\n  make\n  cp fio $out/bin/fio\n# ",
+        "version": "0.0.1",
+        "description": "fio, but with rbd encryption support"
+      }
+    }
+  },
+  "packages": [
+    {
+      "attr_path": "ceph",
+      "broken": false,
+      "derivation": "/nix/store/f7cw4gmw2bssd7j2ib8sv1h70g5man03-ceph-19.2.2.drv",
+      "description": "Distributed storage system",
+      "install_id": "ceph",
+      "license": "[ LGPL-2.1, GPL-2.0-only, BSD-3-Clause, MIT, Public Domain ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=9807714d6944a957c2e036f84b0ff8caf9930bc0",
+      "name": "ceph-19.2.2",
+      "pname": "ceph",
+      "rev": "9807714d6944a957c2e036f84b0ff8caf9930bc0",
+      "rev_count": 826938,
+      "rev_date": "2025-07-08T14:16:20Z",
+      "scrape_date": "2025-07-10T05:34:50.302039Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "19.2.2",
+      "outputs_to_install": [
+        "man",
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/dqbm71k2pabr8120fpwpvf2q5lxz08pd-ceph-19.2.2-dev",
+        "doc": "/nix/store/v943pbslgd1vhqi1pmwyb1966phj84hl-ceph-19.2.2-doc",
+        "lib": "/nix/store/404mikd21aa2dvdl6s9a0sf2fx8g0hl4-ceph-19.2.2-lib",
+        "man": "/nix/store/ms40h7ypmzj35s9wajc84j7zvdvag5b5-ceph-19.2.2-man",
+        "out": "/nix/store/93sk8mc224k5kgqfh4cj15bi6dab7h34-ceph-19.2.2"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "ceph",
+      "broken": false,
+      "derivation": "/nix/store/hssh94hq9lhxwax1b01w6qvlj5zr568a-ceph-19.2.2.drv",
+      "description": "Distributed storage system",
+      "install_id": "ceph",
+      "license": "[ LGPL-2.1, GPL-2.0-only, BSD-3-Clause, MIT, Public Domain ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=9807714d6944a957c2e036f84b0ff8caf9930bc0",
+      "name": "ceph-19.2.2",
+      "pname": "ceph",
+      "rev": "9807714d6944a957c2e036f84b0ff8caf9930bc0",
+      "rev_count": 826938,
+      "rev_date": "2025-07-08T14:16:20Z",
+      "scrape_date": "2025-07-10T06:15:24.653673Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "19.2.2",
+      "outputs_to_install": [
+        "man",
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/c14svdfpxglkw0nzli4ms4giyhdgc64x-ceph-19.2.2-dev",
+        "doc": "/nix/store/16a1rplc7skbjn65dl2qxh24lqsfv2im-ceph-19.2.2-doc",
+        "lib": "/nix/store/2j3fv9c221d9cjz1hmdav9lzc6cssmcj-ceph-19.2.2-lib",
+        "man": "/nix/store/hdzfh5nlhgl4h75dlhjxd90d53cpzzf1-ceph-19.2.2-man",
+        "out": "/nix/store/nh41aqmxq6ayxvxjz0sdqxzrchd9l73k-ceph-19.2.2"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "gdb",
+      "broken": false,
+      "derivation": "/nix/store/a3ckmpxz9qgj5d6lxzb042y8l1fx8j5p-gdb-16.3.drv",
+      "description": "GNU Project debugger",
+      "install_id": "gdb",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=9807714d6944a957c2e036f84b0ff8caf9930bc0",
+      "name": "gdb-16.3",
+      "pname": "gdb",
+      "rev": "9807714d6944a957c2e036f84b0ff8caf9930bc0",
+      "rev_count": 826938,
+      "rev_date": "2025-07-08T14:16:20Z",
+      "scrape_date": "2025-07-10T05:14:30.915195Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "16.3",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/9f9vsxqjs9lrkyv6jb5dsjiz4cc771g5-gdb-16.3"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "gdb",
+      "broken": false,
+      "derivation": "/nix/store/34zzw8m9c1ziqcizn7j7m978kr9vnc16-gdb-16.3.drv",
+      "description": "GNU Project debugger",
+      "install_id": "gdb",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=9807714d6944a957c2e036f84b0ff8caf9930bc0",
+      "name": "gdb-16.3",
+      "pname": "gdb",
+      "rev": "9807714d6944a957c2e036f84b0ff8caf9930bc0",
+      "rev_count": 826938,
+      "rev_date": "2025-07-08T14:16:20Z",
+      "scrape_date": "2025-07-10T05:34:51.295705Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "16.3",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/nhjckrzpyhmqnhxw5xp4m3kipgbpf64x-gdb-16.3"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "gdb",
+      "broken": false,
+      "derivation": "/nix/store/n6ss9mklggfivxd9px23b8jcsqnbz3md-gdb-16.3.drv",
+      "description": "GNU Project debugger",
+      "install_id": "gdb",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=9807714d6944a957c2e036f84b0ff8caf9930bc0",
+      "name": "gdb-16.3",
+      "pname": "gdb",
+      "rev": "9807714d6944a957c2e036f84b0ff8caf9930bc0",
+      "rev_count": 826938,
+      "rev_date": "2025-07-08T14:16:20Z",
+      "scrape_date": "2025-07-10T05:53:49.187488Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "16.3",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/hf2hqbnzsgim2jw29kahif8ykqkwzy4q-gdb-16.3"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "gdb",
+      "broken": false,
+      "derivation": "/nix/store/4wd81wz4vm5605v4r0ff5yq6rsfh50x6-gdb-16.3.drv",
+      "description": "GNU Project debugger",
+      "install_id": "gdb",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=9807714d6944a957c2e036f84b0ff8caf9930bc0",
+      "name": "gdb-16.3",
+      "pname": "gdb",
+      "rev": "9807714d6944a957c2e036f84b0ff8caf9930bc0",
+      "rev_count": 826938,
+      "rev_date": "2025-07-08T14:16:20Z",
+      "scrape_date": "2025-07-10T06:15:25.782832Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "16.3",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/30ny2x1zhcl6k65nmw6bqn9z7mrk0afy-gdb-16.3"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "vim",
+      "broken": false,
+      "derivation": "/nix/store/mbg62yiwxddd5v1flkkfgnqmpdb9i85g-vim-9.1.1401.drv",
+      "description": "Most popular clone of the VI editor",
+      "install_id": "vim",
+      "license": "Vim",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=9807714d6944a957c2e036f84b0ff8caf9930bc0",
+      "name": "vim-9.1.1401",
+      "pname": "vim",
+      "rev": "9807714d6944a957c2e036f84b0ff8caf9930bc0",
+      "rev_count": 826938,
+      "rev_date": "2025-07-08T14:16:20Z",
+      "scrape_date": "2025-07-10T05:15:28.937723Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "9.1.1401",
+      "outputs_to_install": [
+        "out",
+        "xxd"
+      ],
+      "outputs": {
+        "out": "/nix/store/23amfbnd1maxcn78q137nh7sj2wpakcw-vim-9.1.1401",
+        "xxd": "/nix/store/l4pr0lk2lr4risbg7yzggn9inpikx540-vim-9.1.1401-xxd"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "vim",
+      "broken": false,
+      "derivation": "/nix/store/h4lccj3gfb7y0z1r6bbspvdfzs0cy6k5-vim-9.1.1401.drv",
+      "description": "Most popular clone of the VI editor",
+      "install_id": "vim",
+      "license": "Vim",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=9807714d6944a957c2e036f84b0ff8caf9930bc0",
+      "name": "vim-9.1.1401",
+      "pname": "vim",
+      "rev": "9807714d6944a957c2e036f84b0ff8caf9930bc0",
+      "rev_count": 826938,
+      "rev_date": "2025-07-08T14:16:20Z",
+      "scrape_date": "2025-07-10T05:36:20.426826Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "9.1.1401",
+      "outputs_to_install": [
+        "out",
+        "xxd"
+      ],
+      "outputs": {
+        "out": "/nix/store/1zh66ry3k8bkazvdw6v4pb6pp5f6h82y-vim-9.1.1401",
+        "xxd": "/nix/store/hp2abgk3b5h15bg6hqx2s1zxyczvgx8v-vim-9.1.1401-xxd"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "vim",
+      "broken": false,
+      "derivation": "/nix/store/yyh4xza365fi89pjsk2nz1wz0z839mqb-vim-9.1.1401.drv",
+      "description": "Most popular clone of the VI editor",
+      "install_id": "vim",
+      "license": "Vim",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=9807714d6944a957c2e036f84b0ff8caf9930bc0",
+      "name": "vim-9.1.1401",
+      "pname": "vim",
+      "rev": "9807714d6944a957c2e036f84b0ff8caf9930bc0",
+      "rev_count": 826938,
+      "rev_date": "2025-07-08T14:16:20Z",
+      "scrape_date": "2025-07-10T05:54:47.835314Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "9.1.1401",
+      "outputs_to_install": [
+        "out",
+        "xxd"
+      ],
+      "outputs": {
+        "out": "/nix/store/5bhswby0qg25nbd58435yqk59f6igsag-vim-9.1.1401",
+        "xxd": "/nix/store/l83zph53k41xhfp1zc7jfqlsz4ili7gh-vim-9.1.1401-xxd"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "vim",
+      "broken": false,
+      "derivation": "/nix/store/h11ja69c4sp0ay6bxjkrf78g0ycfs15f-vim-9.1.1401.drv",
+      "description": "Most popular clone of the VI editor",
+      "install_id": "vim",
+      "license": "Vim",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=9807714d6944a957c2e036f84b0ff8caf9930bc0",
+      "name": "vim-9.1.1401",
+      "pname": "vim",
+      "rev": "9807714d6944a957c2e036f84b0ff8caf9930bc0",
+      "rev_count": 826938,
+      "rev_date": "2025-07-08T14:16:20Z",
+      "scrape_date": "2025-07-10T06:17:04.098030Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "9.1.1401",
+      "outputs_to_install": [
+        "out",
+        "xxd"
+      ],
+      "outputs": {
+        "out": "/nix/store/cxy72qdk41k3zjs5fw1nw1whv6wf7hv2-vim-9.1.1401",
+        "xxd": "/nix/store/158s805sbka8vv2mwf34kjwmz7inr67m-vim-9.1.1401-xxd"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    }
+  ]
+}
